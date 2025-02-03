@@ -1,0 +1,567 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+
+    /* برای تبلت‌ها */
+    @media (max-width: 768px) {
+        body {
+            font-size: 14px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+    }
+
+    /* برای موبایل‌ها */
+    @media (max-width: 480px) {
+        body {
+            font-size: 12px;
+        }
+
+    }
+}
+
+//صفحه1//
+.top-bar {
+    background-color: #0c1a77;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* فاصله‌گذاری  بین آیکون‌ها */
+    padding: 0 20px;
+    /* فاصله داخلی از چپ و راست */
+    color: white;
+    font-size: 16px;
+
+    /* برای  ایمیل و تلفن */
+    .contact-info {
+        display: flex;
+        align-items: center;
+    }
+
+    /* برای آیکون ایمیل و آدرس ایمیل */
+    .email-icon {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+
+        .email-address {
+            color: white;
+        }
+    }
+
+    /* برای آیکون تلفن و شماره تلفن */
+    .phone-icon {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        .phone-number {
+            color: white;
+        }
+    }
+
+    /* برای آیکون‌های اجتماعی */
+    .social-icons {
+        display: flex;
+        gap: 20px;
+
+        /* فاصله ۲۰px بین آیکون‌ها */
+        a>i {
+            color: white;
+            font-size: 20px;
+            /* اندازه فونت آیکون‌ها */
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+}
+
+.navbar-brand {
+    padding-right: 200px;
+
+}
+
+.navbar-nav {
+    margin-right: auto;
+    /* این خط باعث می‌شود آیتم‌های منو به سمت راست بروند */
+    padding-left: 200px;
+    color: #0c1a77;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    /* اندازه فونت برای لینک‌های منو */
+    color: #333;
+    /* رنگ متن لینک‌ها */
+    margin-right: 15px;
+    /* فاصله بین لینک‌ها */
+
+    &:hover {
+        color: #180789;
+        /* تغییر رنگ هنگام هاور */
+    }
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+
+    .content {
+      width: 50%;
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .button {
+            text-decoration: none;
+            background-color: #20058a;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .features {
+            display: flex;
+            gap: 15px;
+            color: #333;
+            font-size: 0.9em;
+        }
+    }
+
+    .illustration {
+width: 45%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.button {
+    display: inline-block;
+    margin-bottom: 5px;
+    /* فاصله بین دکمه و خط */
+}
+
+.line {
+    width: 30%;
+    /* طول خط */
+    height: 2px;
+    /* ضخامت خط */
+    background-color: rgb(106, 101, 125);
+    /* رنگ خط */
+
+}
+// logo1
+.container1 {
+    margin:  auto;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    .logo { 
+        font-size: 20px;
+        color: #c4c4c4;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+   
+}
+
+
+.text {
+   width: 80px; 
+   
+}
+
+.text h2 {
+    width: 300px;
+    font-size: 30px;
+    color: #0a1f44;
+   
+}
+
+.text p {
+    width: 300px;
+    font-size: 1.1rem;
+    color: #555555;
+}
+
+.more-link {
+    font-size: 0.9rem;
+    color: #0a1f44;
+    text-decoration: none;
+    border-bottom: 1px solid #0a1f44;
+    
+}
+
+.more-link:hover {
+    color: #ff6600;
+    border-color: #ff6600;
+}
+
+.container3 {
+    display: flex;
+     flex-direction: row-reverse; /*ترتیب عناصر بر عکس میکنه*/
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.image3 img {
+    flex: 1;/*باعث میشه عکس فضای بیشتری بگیرد*/
+    min-width: 300px;/*وقتی فضا کم باشه هر کدام یک خط جداگانه بگیرن*/
+}
+
+.text3 {
+    flex: 1;/*متن فضا بیشتر بگیرد*/
+   min-width: 300px;/*وقتی فضا کم باشه هر کدام یک خط جداگانه بگیرن*/
+}
+
+.text3 h2 {
+    width: 500px;
+    font-size: 30px;
+    color: #0a1f44;
+}
+
+.text3 p {
+    width: 200px;
+    font-size: 15px;
+    color: #555555;
+   
+}
+
+.container4 {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: #add8e6;  
+    padding: 20px;
+}
+
+.item {
+    text-align: center;
+    width: 33%; // عرض هر آیتم به اندازه یک سوم
+}
+
+h1 {
+    font-size: 28px;
+    color: #000080; 
+}
+
+p {
+    font-size: 17px;
+    color: #000080; 
+    font-weight: bold;
+}
+
+.team {
+    text-align: center;
+    padding: 50px 20px;
+    justify-content: space-evenly;
+}
+
+.team h1 {
+    font-size: 30px;
+    /* اندازه عنوان اصلی */
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* فاصله بین اعضا */
+    flex-wrap: wrap;
+    /* اگر فضا کم باشد، اعضا به خط بعدی منتقل شه */
+}
+
+.team-member {
+    text-align: center;
+    /* متن‌ها در مرکز قرار بگیرند */
+    width: 200px;
+    /* عرض هر عضو */
+}
+
+.team-member img {
+    width: 100px;
+    /* عرض تصویر پروفایل */
+    height: 100px;
+    /* ارتفاع تصویر پروفایل */
+    border-radius: 50%;
+    /* تصاویر گرد شوند */
+}
+
+.team-member h2 {
+    font-size:19px;
+    color: #120699;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 13px;
+}
+
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;/*80% کل صفحه می گیرد*/
+    text-align: center;
+    background-color: #c2dbff;
+
+    .content {
+        width: 600px;
+
+        h1 {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #1f3251;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #1f3251;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 1ms;
+
+            &:hover {
+                background-color: #00376e;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #1f3251;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+
+    a {
+        color: #d3e2ef;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+//صفحه 2//
+
+
+
+.services {
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+
+    h1 {
+        font-size: 25px;
+        color: #2c3e50;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* ساختار شبکه با اندازه خودکار */
+        gap: 20px;
+        margin:  auto;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .service {
+        background: #d7d7d70b;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: right;
+      
+
+        img {
+            width: 50px;
+            height: 50px;
+            float: right;/* آیکون در سمت راست قرار می‌گیرد */
+        }
+
+        h2 {
+            font-size:25px;
+            color: #34495e;
+        }
+        p {
+            font-size: 15px;
+            color: #7f8c8d;
+        }
+    }
+}
+
+//صفحه 3//
+
+
+.team1 {
+    width: 100%;
+    margin:  auto;
+    padding: 20px;
+}
+
+.team2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #00274d;
+    text-align: right; 
+}
+
+.team-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; // تنظیم برای شروع از راست
+}
+
+.team-image {
+    flex: 0 0 40%; // عرض ثابت برای تصویر
+    text-align: center;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.team-text {
+    flex: 1; // بقیه فضای موجود برای متن
+    padding: 0 20px;
+
+    h2 {
+        font-size:28px;
+        color: #00274d;
+    }
+
+    p {
+        font-size: 15px;
+        color: #555;
+    }
+}
+
+//صفحه4//
+.contact-div {
+    width: 100%;
+    margin:  auto;
+}
+.contact-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #00274d;
+    text-align: right;
+}
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.contact-info {
+    flex: 1;
+   
+    margin-right: 20px;
+
+    h2 {
+        font-size: 23px;
+        color: #00274d;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 15px;
+    }
+}
+.contact-form {
+    flex: 1;
+    margin-left: 30px;
+    h2 {
+        font-size: 25px;
+        color: #00274d;
+    }
+    form {
+        max-width: 180px;
+
+        display: flex;
+        flex-direction: column; /*ایتم هارو در یک ستون عمودی قرار می */
+
+        
+        input,
+        textarea {
+            border: none;
+           border-bottom: 2px solid black;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            font-size: 20px;
+            text-align: right;
+            display: inline-block;/*نمایش عنصر به صورت خطی*/
+        }
+    }
+}
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+img {
+    width: 100%;
+    height: 450px;
+   
+}
